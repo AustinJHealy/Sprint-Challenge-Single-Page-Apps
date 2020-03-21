@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
  
-export default function SearchForm({ onSearch }) {
+function SearchForm({ onSearch }) {
   const [query, setQuery] = useState({
     name: ""
   })
@@ -14,12 +14,14 @@ export default function SearchForm({ onSearch }) {
      <form onSubmit={() => onSearch(query)}>
         <input
           onChange={changeHandler}
-          placeholder="name"
-          value={query.name}
           name="name"
+          value={query.name}
+          placeholder="name"
         />
         <button type="submit">Search</button>
       </form>
     </section>
   );
 }
+
+export default SearchForm;

@@ -12,9 +12,9 @@ export default function App() {
   return (
     <main data-testid='app'>
       <Route exact path ='/' component={ WelcomePage } />
+      <Route exact path ="/characters/:name" component={ SearchForm } />
       <Header />
       <CharacterCard />
-      <SearchForm />
     </main>
   );
 }

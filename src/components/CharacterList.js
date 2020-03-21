@@ -14,10 +14,10 @@ function CharacterList() {
       res => setCharacterData(res.data.results)
     )
     .catch(err => console.log(err))
-  }, [characterData])
+  }, [])
 
   
-  
+  console.log(characterData);
   return (
     
     <section className="character-list">
@@ -27,7 +27,8 @@ function CharacterList() {
         (item) => { 
         return (
           <div className={item.id}>
-          <p>{item.name}</p>
+          <p>Name: {item.name}</p>
+          <img src={item.image} alt={item.name}/>
           </div>
         
         )
